@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -11,11 +11,13 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://DanielHashmi.github.io',
-  baseUrl: '/physical-ai-and-humanoid-robotics/',
+  // YE TEENO LINES AB BILKUL SAHI HAIN – GitHub Pages pe perfect chalega
+  url: 'https://ayanahmedkhan381.github.io',
+  baseUrl: '/AI-and-Humanoid-Robotics_Book/',
+  trailingSlash: true,
 
-  organizationName: 'DanielHashmi',
-  projectName: 'physical-ai-and-humanoid-robotics',
+  organizationName: 'AyanAhmedKhan381',
+  projectName: 'AI-and-Humanoid-Robotics_Book',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -49,7 +51,7 @@ const config: Config = {
     image: 'img/social-card.jpg',
     colorMode: {
       defaultMode: 'light',
-      disableSwitch: true, // We handle this in user profile dropdown
+      disableSwitch: true,
       respectPrefersColorScheme: true,
     },
     navbar: {
@@ -70,22 +72,10 @@ const config: Config = {
           label: 'Modules',
           position: 'left',
           items: [
-            {
-              label: 'Module 1: ROS 2 Fundamentals',
-              to: '/docs/module1/week1-intro-physical-ai',
-            },
-            {
-              label: 'Module 2: Gazebo Simulation',
-              to: '/docs/module2/week6-gazebo',
-            },
-            {
-              label: 'Module 3: NVIDIA Isaac',
-              to: '/docs/module3/week8-isaac',
-            },
-            {
-              label: 'Module 4: Conversational Robotics',
-              to: '/docs/module4/week13-conversational-robotics',
-            },
+            { label: 'Module 1: ROS 2 Fundamentals', to: '/docs/module1/week1-intro-physical-ai' },
+            { label: 'Module 2: Gazebo Simulation', to: '/docs/module2/week6-gazebo' },
+            { label: 'Module 3: NVIDIA Isaac', to: '/docs/module3/week8-isaac' },
+            { label: 'Module 4: Conversational Robotics', to: '/docs/module4/week13-conversational-robotics' },
           ],
         },
       ],
@@ -96,31 +86,16 @@ const config: Config = {
         {
           title: 'Course',
           items: [
-            {
-              label: 'Introduction',
-              to: '/docs',
-            },
-            {
-              label: 'Module 1: ROS 2',
-              to: '/docs/module1/week1-intro-physical-ai',
-            },
-            {
-              label: 'Module 2: Simulation',
-              to: '/docs/module2/week6-gazebo',
-            },
+            { label: 'Introduction', to: '/docs' },
+            { label: 'Module 1: ROS 2', to: '/docs/module1/week1-intro-physical-ai' },
+            { label: 'Module 2: Simulation', to: '/docs/module2/week6-gazebo' },
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'BasenAI GitHub',
-              href: 'https://github.com/orgs/basenai/dashboard',
-            },
-            {
-              label: 'BasenAI LinkedIn',
-              href: 'https://www.linkedin.com/company/basenai',
-            },
+            { label: 'BasenAI GitHub', href: 'https://github.com/orgs/basenai/dashboard' },
+            { label: 'BasenAI LinkedIn', href: 'https://www.linkedin.com/company/basenai' },
           ],
         },
         {
@@ -128,7 +103,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/DanielHashmi/physical-ai-and-humanoid-robotics',
+              href: 'https://github.com/AyanAhmedKhan381/AI-and-Humanoid-Robotics_Book',
             },
           ],
         },
