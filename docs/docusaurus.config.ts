@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  // YE TEENO LINES AB BILKUL SAHI HAIN – GitHub Pages pe perfect chalega
+  // GitHub Pages config
   url: 'https://ayanahmedkhan381.github.io',
   baseUrl: '/AI-and-Humanoid-Robotics_Book/',
   trailingSlash: true,
@@ -28,7 +28,9 @@ const config: Config = {
   },
 
   customFields: {
-    apiUrl: process.env.REACT_APP_API_URL || 'https://ai-rative-book-backend-production.up.railway.app',
+    apiUrl:
+      process.env.REACT_APP_API_URL ||
+      'https://ai-rative-book-backend-production.up.railway.app',
     apiKey: process.env.REACT_APP_API_KEY || '',
   },
 
@@ -37,11 +39,11 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: require.resolve('./sidebars.ts'), // FIXED ✔
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'), // FIXED ✔
         },
       } satisfies Preset.Options,
     ],
@@ -54,6 +56,7 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: true,
     },
+
     navbar: {
       title: 'Physical AI',
       logo: {
@@ -72,14 +75,27 @@ const config: Config = {
           label: 'Modules',
           position: 'left',
           items: [
-            { label: 'Module 1: ROS 2 Fundamentals', to: '/docs/module1/week1-intro-physical-ai' },
-            { label: 'Module 2: Gazebo Simulation', to: '/docs/module2/week6-gazebo' },
-            { label: 'Module 3: NVIDIA Isaac', to: '/docs/module3/week8-isaac' },
-            { label: 'Module 4: Conversational Robotics', to: '/docs/module4/week13-conversational-robotics' },
+            {
+              label: 'Module 1: ROS 2 Fundamentals',
+              to: '/docs/module1/week1-intro-physical-ai',
+            },
+            {
+              label: 'Module 2: Gazebo Simulation',
+              to: '/docs/module2/week6-gazebo',
+            },
+            {
+              label: 'Module 3: NVIDIA Isaac',
+              to: '/docs/module3/week8-isaac',
+            },
+            {
+              label: 'Module 4: Conversational Robotics',
+              to: '/docs/module4/week13-conversational-robotics',
+            },
           ],
         },
       ],
     },
+
     footer: {
       style: 'light',
       links: [
@@ -87,15 +103,27 @@ const config: Config = {
           title: 'Course',
           items: [
             { label: 'Introduction', to: '/docs' },
-            { label: 'Module 1: ROS 2', to: '/docs/module1/week1-intro-physical-ai' },
-            { label: 'Module 2: Simulation', to: '/docs/module2/week6-gazebo' },
+            {
+              label: 'Module 1: ROS 2',
+              to: '/docs/module1/week1-intro-physical-ai',
+            },
+            {
+              label: 'Module 2: Simulation',
+              to: '/docs/module2/week6-gazebo',
+            },
           ],
         },
         {
           title: 'Community',
           items: [
-            { label: 'BasenAI GitHub', href: 'https://github.com/orgs/basenai/dashboard' },
-            { label: 'BasenAI LinkedIn', href: 'https://www.linkedin.com/company/basenai' },
+            {
+              label: 'BasenAI GitHub',
+              href: 'https://github.com/orgs/basenai/dashboard',
+            },
+            {
+              label: 'BasenAI LinkedIn',
+              href: 'https://www.linkedin.com/company/basenai',
+            },
           ],
         },
         {
@@ -110,10 +138,12 @@ const config: Config = {
       ],
       copyright: `© ${new Date().getFullYear()} Physical AI & Humanoid Robotics. Built for learners.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
